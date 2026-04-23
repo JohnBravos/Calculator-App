@@ -148,3 +148,27 @@ function percentage() {
     currentNumber = (num / 100).toString();
     updateDisplay();
 }
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+}
+
+const changeThemeBtn = document.querySelector('.buttons button.sun');
+
+if (changeThemeBtn) {
+    changeThemeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+
+        const icon = changeThemeBtn.querySelector('i');
+
+        if (document.body.classList.contains('light-theme')) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}

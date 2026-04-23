@@ -1,3 +1,21 @@
+:root {
+    --bg-calc-color: #28292A;
+    --bor-calc-color: #9A7AA9;
+    --font-color: #fff;
+    --bg-btn-color: #323334;
+    --hover-btn-color: #4E4E51;
+    --hover-btn-spec-color: #6B6B6E;
+}
+
+.light-theme {
+    --bg-calc-color: #fff;
+    --bor-calc-color: #9A7AA9;
+    --font-color: #28292A;
+    --bg-btn-color: #E0E0E0;
+    --hover-btn-color: #C0C0C0;
+    --hover-btn-spec-color: #A0A0A0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +31,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
 }
 
 .calculator {
@@ -21,11 +39,11 @@
     flex-direction: column;
     width: 100%;
     max-width: 330px;
-    background: #28292A;
+    background: var(--bg-calc-color);
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     padding: 10px;
-    border: 1px solid #9A7AA9;
+    border: 1px solid var(--bor-calc-color);
 }
 
 .display {
@@ -33,7 +51,6 @@
     width: 100%;
     max-width: 330px;
     height: 170px;
-    color: #fff;
 }
 
 .buttons {
@@ -50,8 +67,8 @@
 .buttons button {
     width: 100%;
     height: 100%;
-    background: #323334;
-    color: #fff;
+    background: var(--bg-btn-color);
+    color: var(--font-color);
     font-size: large;
     cursor: pointer;
     border-radius: 10px;
@@ -60,31 +77,28 @@
 }
 
 .buttons button.special {
-    background: #4E4E51;
-    color: #fff;
-    
+    background: var(--hover-btn-color);
 }
 
 .buttons button:hover {
-    background: #4E4E51;
+    background: var(--hover-btn-color);
 }
 
 .buttons button.special:hover {
-    background: #6B6B6E;
+    background: var(--hover-btn-spec-color);
 }
 
 .buttons button.equals {
     background: linear-gradient(135deg, #EA34CF, #EA4F34);
-    color: #fff;
     height: 205%;
 }
 
 .buttons button.sun {
-    color: #EA3474
+    color: #EA3474;
 }
 
 .buttons button.ac {
-    color: #EA3474
+    color: #EA3474;
 }
 
 .display input {
@@ -92,7 +106,7 @@
     height: 50%;
     background: transparent;
     border: none;
-    color: #fff;
+    color: var(--font-color);
     text-align: right;
     padding: 10px;
     font-size: 2rem;
