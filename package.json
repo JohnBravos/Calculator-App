@@ -1,4 +1,24 @@
 {
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "A simple calculator web application with Vercel Analytics",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnBravos/Calculator-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnBravos/Calculator-App/issues"
+  },
+  "homepage": "https://github.com/JohnBravos/Calculator-App#readme",
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
   }
